@@ -7,5 +7,5 @@ then run them using './(filename)'
 
 for example
 
-chmod +x fracs
+chmod +x fracs                       
 ./fracs

@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+
+import turtle
+from turtle import *
+
+def drawKoch(t, order, size):
+    if order == 0:
+        t.forward(size)
+    else:
+        drawKoch(t, order-1, size/3)
+        t.left(60)
+        drawKoch(t, order-1, size/3)
+        t.right(120)
+        drawKoch(t, order-1, size/3)
+        t.left(60)
+        drawKoch(t, order-1, size/3)
+
+def koch(t, order, size):
+    drawKoch(t, order, size)
+    t.right(270)
+    drawKoch(t,order, size)
+    t.right(270)
+    drawKoch(t, order, size)
+    t.right(270)
+    drawKoch(t, order, size)
+
+screen = Screen()
+screen.setup(640,640)
+screen.title('Koch Fractal')
+screen.bgcolor('#333333')
+t = turtle.Turtle()
+t.hideturtle()
+t.speed(10)
+t.penup()
+t.setx(-5)
+t.sety(0)
+t.pendown()
+t.color('#1793d1')
+
+koch(t, 4, 400)
+koch(t, 4, 400)
+koch(t, 4, 400)
+koch(t, 4, 400)
+koch(t, 4, 300)
+koch(t, 4, 300)
+koch(t, 4, 300)
+koch(t, 4, 300)
+koch(t, 4, 200)
+koch(t, 4, 200)
+koch(t, 4, 200)
+koch(t, 4, 200)
+koch(t, 4, 100)
+koch(t, 4, 100)
+koch(t, 4, 100)
+koch(t, 4, 100)
+turtle.mainloop()

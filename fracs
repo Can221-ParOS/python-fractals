@@ -1,0 +1,100 @@
+#!/usr/bin/env python
+
+import turtle
+from turtle import *
+
+MINIMUM_BRANCH_LENGTH = 5
+
+def build_tree(t, branch_length, shorten_by, angle):
+    if branch_length > MINIMUM_BRANCH_LENGTH:
+        t.forward(branch_length)
+        new_length = branch_length - shorten_by
+
+        t.left(angle)
+        build_tree(t, new_length, shorten_by, angle)
+
+        t.right(angle * 2)
+        build_tree(t, new_length, shorten_by, angle)
+
+        t.left(angle)
+        t.backward(branch_length)
+
+screen = Screen()
+screen.setup(640,640)
+screen.title('Tree Fractal')
+screen.bgcolor('#333333')
+tree = turtle.Turtle()
+tree.hideturtle()
+tree.speed(10)
+tree.setheading(90)
+tree.color('#1793d1')
+
+def build_tree2(t, branch_length, shorten_by, angle):
+    if branch_length > MINIMUM_BRANCH_LENGTH:
+        t.forward(branch_length)
+        new_length = branch_length - shorten_by
+
+        t.left(angle)
+        build_tree2(t, new_length, shorten_by, angle)
+
+        t.right(angle * 2)
+        build_tree2(t, new_length, shorten_by, angle)
+
+        t.left(angle)
+        t.backward(branch_length)
+
+tree2 = turtle.Turtle()
+tree2.hideturtle()
+tree2.speed(10)
+tree2.setheading(270)
+tree2.color('#1793d1')
+
+def build_tree3(t, branch_length, shorten_by, angle):
+    if branch_length > MINIMUM_BRANCH_LENGTH:
+        t.forward(branch_length)
+        new_length = branch_length - shorten_by
+
+        t.left(angle)
+        build_tree3(t, new_length, shorten_by, angle)
+
+        t.right( angle * 2)
+        build_tree3(t, new_length, shorten_by, angle)
+
+        t.left(angle)
+        t.backward(branch_length)
+
+tree3 = turtle.Turtle()
+tree3.hideturtle()
+tree3.speed(10)
+tree3.setheading(180)
+tree3.color('#1793d1')
+
+def build_tree4(t, branch_length, shorten_by, angle):
+    if branch_length > MINIMUM_BRANCH_LENGTH:
+        t.forward(branch_length)
+        new_length = branch_length - shorten_by
+
+        t.left(angle)
+        build_tree4(t, new_length, shorten_by, angle)
+
+        t.right(angle * 2)
+        build_tree(t, new_length, shorten_by, angle)
+
+        t.left(angle)
+        t.backward(branch_length)
+
+tree4 = turtle.Turtle()
+tree4.hideturtle()
+tree4.speed(10)
+tree4.setheading(0)
+tree4.color('#1793d1')
+
+build_tree(tree, 50, 5, 30)
+build_tree2(tree2, 50, 5, 30)
+build_tree4(tree4, 50, 5, 30)
+build_tree3(tree3, 50, 5, 30)
+turtle.mainloop()
+
+
+
+

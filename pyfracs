@@ -1,0 +1,68 @@
+#!/usr/bin/env python
+
+import sys
+import os
+import random
+from tkinter import *
+
+window=Tk()
+
+window.title("Pyfracs Menu")
+window.geometry('377x118')
+window.configure(bg='#333333')
+
+def runbf():
+    os.system('python biofrac')
+
+def rundf():
+    os.system('python decafrac')
+
+def runf():
+    os.system('python fracs')
+
+def runhf():
+    os.system('python hilfrac')
+
+def runkf():
+    os.system('python kofrac')
+
+def runof():
+    os.system('python octafrac')
+
+def runsf():
+    os.system('python sqfrac')   
+
+def runrd():
+    num = random.randrange(1, 8)
+    if num == 1:
+        os.system('python biofrac')
+    if num == 2:
+        os.system('python decafrac')
+    if num == 3:
+        os.system('python fracs')
+    if num == 4:
+        os.system('python hilfrac')
+    if num == 5:
+        os.system('python kofrac')
+    if num == 6:
+        os.system('python octafrac')
+    elif num == 7:
+        os.system('python sqfrac')
+    
+btnbf = Button(window, text="BioFrac ", width=20, bg="#333333", fg="#1793d1", command=runbf)
+btnbf.grid(column=0, row=0)
+btndf = Button(window, text="DecaFrac", width=20, bg="#333333", fg="#1793d1", command=rundf)
+btndf.grid(column=1, row=0)
+btnf = Button(window, text=" Fracs  ", width=20, bg="#333333", fg="#1793d1", command=runf)
+btnf.grid(column=0, row=1)
+btnhf = Button(window, text="HilFrac ", width=20, bg="#333333", fg="#1793d1", command=runhf)
+btnhf.grid(column=1, row=1)
+btnkf = Button(window, text=" KoFrac ", width=20, bg="#333333", fg="#1793d1", command=runkf)
+btnkf.grid(column=0, row=2)
+btnof = Button(window, text="OctaFrac", width=20, bg="#333333", fg="#1793d1", command=runof)
+btnof.grid(column=1, row=2)
+btnsq = Button(window, text=" SqFrac ", width=20, bg="#333333", fg="#1793d1", command=runsf)
+btnsq.grid(column=0, row=3)
+btnrd = Button(window, text=" Random ", width=20, bg="#333333", fg="#1793d1", command=runrd)
+btnrd.grid(column=1, row=3)
+window.mainloop()

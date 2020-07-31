@@ -10,4 +10,4 @@ use the " chmod + * " command to make the scripts executable
 
 then run the menu using " ./pyfracs "
 
-the " fractals " script can be moved to a custom /bin symlink (such as ~/bin such as on my setup) and used to run the program using a standard linux command.
+the " fractals " script can be moved to a custom bin path (such as ~/bin such as on my setup) and used to run the program using a standard linux command.

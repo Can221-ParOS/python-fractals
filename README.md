@@ -6,7 +6,7 @@ Make sure to clone the repository in your $HOME directory for the " fractals " c
 A video example of the generation can be found here: https://www.youtube.com/watch?v=26O8Vx84TBk
 
 to run them, cd into the python-fractals directory,
-use the " chmod + * " command to make the scripts executable
+use the " chmod +x * " command to make the scripts executable
 
 then run the menu using " ./pyfracs "
 

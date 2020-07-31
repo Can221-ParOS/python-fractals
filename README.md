@@ -1,5 +1,5 @@
 # python-fractals
-A collection of python scripts that procedurally draws complex fractals using the Turtle module. (They take a long time to draw due to the complexity, at most 30 minutes; kofrac takes 40 minutes due to the large amount of shapes to draw)
+A collection of python scripts that procedurally draws complex fractals using the Turtle module. (They take a long time to draw due to the complexity, some around 30 minutes)
 
 Make sure to clone the repository in your $HOME directory for the " fractals " command to work if you put it in a /bin symlink
 

@@ -3,6 +3,7 @@
 import turtle
 from turtle import *
 
+## Create the initial fractal pattern to draw shapes with ##
 def drawHil(t, order, size):
     if order == 0:
         t.forward(size)
@@ -16,6 +17,7 @@ def drawHil(t, order, size):
         drawHil(t, order-1, size/3)
         t.left(90)
 
+## Create geometric shapes using the initial fractal pattern ##
 def drawHil2(t, order, size):
     drawHil(t, order, size)
     t.right(90)
@@ -38,10 +40,12 @@ def drawoct(t, order, size):
     t.right(60)
     drawHil(t, order, size)
 
+## Setup the screen and window ##
 screen = Screen()
 screen.setup(640,640)
 screen.title('Hilbert Curve Fractal')
 screen.bgcolor('#333333')
+## Set line parameters for each pattern ##
 t = turtle.Turtle()
 t.hideturtle()
 t.speed(0)
@@ -55,6 +59,8 @@ t3.hideturtle()
 t3.speed(0)
 t3.color('#DF00FF')
 
+## Draw multiple different instances of the same patterns, creating a more ##
+## complex pattern ##
 drawHil2(t2, 4, 400)
 drawHil2(t2, 4, 400)
 drawHil2(t2, 4, 400)
@@ -69,6 +75,7 @@ drawHil2(t, 4, 700)
 drawHil2(t, 4, 700)
 drawHil2(t, 4, 700)
 drawHil2(t, 4, 700)
+## Make the window stay open until exit ##
 turtle.mainloop()
 
 

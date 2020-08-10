@@ -61,10 +61,10 @@ t3.color('#DF00FF')
 
 ## Draw multiple different instances of the same patterns, creating a more ##
 ## complex pattern ##
-drawHil2(t2, 3, 400)
-drawHil2(t2, 3, 400)
-drawHil2(t2, 3, 400)
-drawHil2(t2, 3, 400)
+drawHil2(t2, 4, 400)
+drawHil2(t2, 4, 400)
+drawHil2(t2, 4, 400)
+drawHil2(t2, 4, 400)
 drawoct(t3, 3,  400)
 drawoct(t3, 3,  400)
 drawoct(t3, 3,  400)

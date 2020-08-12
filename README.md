@@ -3,8 +3,6 @@ A collection of python scripts that procedurally draws complex fractals using th
 
 Make sure to clone the repository in your $HOME directory for the " fractals " command to work if you put it in a /bin symlink
 
-A video example of the generation can be found here: https://www.youtube.com/watch?v=26O8Vx84TBk
-
 to run them, cd into the python-fractals directory,
 use the " chmod +x * " command to make the scripts executable
 
